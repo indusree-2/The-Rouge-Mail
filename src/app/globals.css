@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------------------- */
+/* 1. Root Variable Definitions                                               */
+/* -------------------------------------------------------------------------- */
+:root {
+  /* Dark Cherry Aesthetic Palette */
+  --background: 10 3% 3%; /* #1A0505 - Deep Cherry */
+  --foreground: 46 58% 91%; /* #F5F5DC - Parchment */
+
+  --cherry: #1a0505;
+  --wax: #8b0000;
+  --ink: #2b0b0b;
+  --parchment: #f5f5dc;
+
+  /* Font variables linked to layout.tsx */
+  --font-serif: var(--font-playfair);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2. Base Styling                                                            */
+/* -------------------------------------------------------------------------- */
+body {
+  background-color: var(--cherry);
+  color: var(--parchment);
+  font-family: var(--font-serif), serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. Custom Utility Classes                                                  */
+/* -------------------------------------------------------------------------- */
+@layer utilities {
+  /* Poetic Letter Fade-in */
+  .animate-fade-in {
+    animation: letterReveal 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  /* Ink vessel pulsing when low */
+  .animate-ink-pulse {
+    animation: inkPulse 2s ease-in-out infinite;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4. Keyframe Animations                                                     */
+/* -------------------------------------------------------------------------- */
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes inkPulse {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px var(--wax));
+  }
+  50% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 8px var(--wax));
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* 5. Scrollbar Styling (Gothic Noir style)                                   */
+/* -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cherry);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 0, 0, 0.3); /* Transparent Wax Red */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wax);
+}

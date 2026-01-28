@@ -1,0 +1,79 @@
+/* [project]/src/app/globals.css [app-client] (css) */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+  --background: 10 3% 3%;
+  --foreground: 46 58% 91%;
+  --cherry: #1a0505;
+  --wax: #8b0000;
+  --ink: #2b0b0b;
+  --parchment: beige;
+  --font-serif: var(--font-playfair);
+}
+
+body {
+  background-color: var(--cherry);
+  color: var(--parchment);
+  font-family: var(--font-serif), serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: 1.8s cubic-bezier(.4, 0, .2, 1) forwards letterReveal;
+  }
+
+  .animate-ink-pulse {
+    animation: 2s ease-in-out infinite inkPulse;
+  }
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateY(10px)scale(.98);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur();
+    transform: translateY(0)scale(1);
+  }
+}
+
+@keyframes inkPulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2px var(--wax));
+  }
+
+  50% {
+    opacity: .6;
+    filter: drop-shadow(0 0 8px var(--wax));
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cherry);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b00004d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wax);
+}
+
+/*# sourceMappingURL=src_app_globals_css_bad6b30c._.single.css.map*/

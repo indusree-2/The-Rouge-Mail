@@ -1,0 +1,103 @@
+[00:00:02.334] Server  LOG     ✓ Ready in 1496ms
+[00:00:13.726] Server  ERROR   ⨯ ./src/app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { Playfair_Display, Inter } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | // Loading elegant serif for titles and a clean sans-serif for UI
+  6 | const playfair = Playfair_Display({ 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:15.266] Browser ERROR   uncaughtError: Error: ./src/app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { Playfair_Display, Inter } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | // Loading elegant serif for titles and a clean sans-serif for UI
+  6 | const playfair = Playfair_Display({ 
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:15.554] Browser ERROR   ./src/app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { Playfair_Display, Inter } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | // Loading elegant serif for titles and a clean sans-serif for UI
+  6 | const playfair = Playfair_Display({ 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:15.790] Browser ERROR   ./src/app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { Playfair_Display, Inter } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | // Loading elegant serif for titles and a clean sans-serif for UI
+  6 | const playfair = Playfair_Display({ 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:39.925] Browser ERROR   ./src/app/layout.tsx:3:1
+Module not found: Can't resolve './globals.css'
+  1 | import type { Metadata } from "next";
+  2 | import { Playfair_Display, Inter } from "next/font/google";
+> 3 | import "./globals.css";
+    | ^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | // Loading elegant serif for titles and a clean sans-serif for UI
+  6 | const playfair = Playfair_Display({ 
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:57.739] Server  LOG     ✓ Compiled in 98ms
+[00:02:59.508] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:59.920] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="playfair_d...">
+                          <body
++                           className="bg-cherry text-parchment antialiased selection:bg-wax selection:text-white"
+-                           className="bg-cherry text-parchment antialiased selection:bg-wax selection:text-white high..."
+                          >
+                  ...
+
+[00:03:04.973] Server  LOG     ✓ Compiled in 17ms
+[00:03:30.614] Browser LOG     Letter Sealed: hello
